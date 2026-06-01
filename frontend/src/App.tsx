@@ -145,8 +145,8 @@ export default function App() {
       
     setStockData(result)
     } 
-    catch (err: any) {
-      setError(err.message)
+    catch (error: any) {
+      setError(error.message)
     } 
     finally {
       setLoading(false)
