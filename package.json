@@ -1,0 +1,27 @@
+{
+  "name": "promthtakehome",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+"scripts": {
+    "install:all": "npm install --prefix backend && npm install --prefix frontend",
+    "dev:backend": "npm run dev --prefix backend",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Meepyster/PromthTakeHome.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Meepyster/PromthTakeHome/issues"
+  },
+  "homepage": "https://github.com/Meepyster/PromthTakeHome#readme",
+  "devDependencies": {
+    "concurrently": "^10.0.1"
+  }
+}
