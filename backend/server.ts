@@ -9,11 +9,10 @@ const fastify = Fastify({ logger: true })
 
 const start = async () => {
   try {
-    // 1. Register Plugins
-    await fastify.register(cors, {
-      origin: true
-    })
-    
+    // cors
+    await fastify.register(cors, {origin: true})
+
+    //swagger
     await fastify.register(swagger, {
       openapi: {
         info: {
@@ -22,21 +21,20 @@ const start = async () => {
         }
       }
     })
+    // docs setup
+    await fastify.register(swaggerUi, {routePrefix: '/docs'})
 
-    await fastify.register(swaggerUi, {
-      routePrefix: '/docs'
-    })
-
-    // 2. Register Routes
+    // routes
     await fastify.register(stockRoutes)
 
+    // sensible error checking
     await fastify.register(sensible)
 
-    // 3. Start Server
+    // start on port 3000
     await fastify.listen({ port: 3000 })
-    
-  } catch (err) {
-    fastify.log.error(err)
+  } 
+  catch (error) {
+    fastify.log.error(error)
     process.exit(1)
   }
 }
