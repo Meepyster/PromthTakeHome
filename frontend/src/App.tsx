@@ -37,6 +37,7 @@ const formatSuffix = (day: number) => {
 }
 
 const formatHeader = (data: StockDataPoint[]) => {
+
   const first = new Date(data[0].date)
   const last = new Date(data[data.length - 1].date)
   
@@ -325,7 +326,7 @@ export default function App() {
                   <div className="text-xs font-semibold text-gray-500 uppercase">Average Open</div>
                   <div className="mt-1 text-lg font-bold text-gray-900">{formatCurrency(stats.open.avg)}</div>
                 </div>
-                <div className={`p-4 rounded-md border flex items-center justify-center font-bold text-lg uppercase tracking-wider ${stats.open.trend.className}`}>
+                <div className={`p-4 rounded-md border flex items-center justify-center font-bold text-lg uppercase ${stats.open.trend.className}`}>
                   {stats.open.trend.label}
                 </div>
               </div>
@@ -343,7 +344,7 @@ export default function App() {
                   <div className="text-xs font-semibold text-gray-500 uppercase">Average High</div>
                   <div className="mt-1 text-lg font-bold text-gray-900">{formatCurrency(stats.high.avg)}</div>
                 </div>
-                <div className={`p-4 rounded-md border flex items-center justify-center font-bold text-lg uppercase tracking-wider ${stats.high.trend.className}`}>
+                <div className={`p-4 rounded-md border flex items-center justify-center font-bold text-lg uppercase ${stats.high.trend.className}`}>
                   {stats.high.trend.label}
                 </div>
               </div>
@@ -361,7 +362,7 @@ export default function App() {
                   <div className="text-xs font-semibold text-gray-500 uppercase">Average Low</div>
                   <div className="mt-1 text-lg font-bold text-gray-900">{formatCurrency(stats.low.avg)}</div>
                 </div>
-                <div className={`p-4 rounded-md border flex items-center justify-center font-bold text-lg uppercase tracking-wider ${stats.low.trend.className}`}>
+                <div className={`p-4 rounded-md border flex items-center justify-center font-bold text-lg uppercase ${stats.low.trend.className}`}>
                   {stats.low.trend.label}
                 </div>
               </div>
@@ -379,7 +380,7 @@ export default function App() {
                   <div className="text-xs font-semibold text-gray-500 uppercase">Average Volume</div>
                   <div className="mt-1 text-lg font-bold text-gray-900">{formatVolume(stats.volume.avg)}</div>
                 </div>
-                <div className={`p-4 rounded-md border flex items-center justify-center font-bold text-lg uppercase tracking-wider ${stats.volume.trend.className}`}>
+                <div className={`p-4 rounded-md border flex items-center justify-center font-bold text-lg uppercase ${stats.volume.trend.className}`}>
                   {stats.volume.trend.label}
                 </div>
               </div>
