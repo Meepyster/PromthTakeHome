@@ -2,7 +2,7 @@ import Fastify from 'fastify'
 import swagger from '@fastify/swagger'
 import swaggerUi from '@fastify/swagger-ui'
 import cors from '@fastify/cors'
-import stockRoutes from './routes.js'
+import stockRoutes from './routes/routes.js'
 import sensible from '@fastify/sensible'
 
 const fastify = Fastify({ logger: true })
