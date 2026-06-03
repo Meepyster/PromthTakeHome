@@ -15,10 +15,10 @@ npm run dev
 * ```ctrl + click``` the blue link and the frontend will open in your default browser or IDE.
 >If you're on MacOS you may run into permission issues. Run these to grant access:
 >```bash
-chmod +x node_modules/.bin/concurrently
+>chmod +x node_modules/.bin/concurrently
 >```
 >```bash
-chmod +x backend/node_modules/.bin/tsx
+>chmod +x backend/node_modules/.bin/tsx
 >```
 > If this does not work, delete the ```node_modules``` folder in both the root and backend and run ```npm install``` in each directory.
 
